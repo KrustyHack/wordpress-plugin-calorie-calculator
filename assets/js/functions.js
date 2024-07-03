@@ -58,7 +58,8 @@ window.switch_data_tab = function(owner, index, value){
 }
 
 window.isMetricSystem = function() {
-	return $('.system-switcher').classList.contains('system-switcher--active');
+	return true;
+	// return $('.system-switcher').classList.contains('system-switcher--active');
 }
 
 window.setSystem = function(system) {
