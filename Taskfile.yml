@@ -1,0 +1,9 @@
+# Taskfile
+version: '3'
+tasks:
+  sync:
+    cmds:
+      - rm calorie-calculator-master.zip || true 
+      - zip calorie-calculator-master.zip * -r
+      - scp -P 65002 calorie-calculator-master.zip u859046688@193.203.188.3:/home/u859046688/
+      - ssh -p 65002 u859046688@193.203.188.3 'wp --path=/home/u859046688/domains/calculateurdecalories.com/public_html/ plugin uninstall --deactivate calorie-calculator-master && wp --path=/home/u859046688/domains/calculateurdecalories.com/public_html/ plugin install calorie-calculator-master.zip --force --activate'
