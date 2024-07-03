@@ -199,10 +199,10 @@
                 		<button class="system-switcher" onclick="toggleSystem(this)" aria-label="Switch System">
                 			<div class="system-switcher__circle"></div>
                 			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                	<path d="M10.5 9.5H10C9.44772 9.5 9 9.05228 9 8.5V2.5M4.5 2.5H3.5C2.94772 2.5 2.5 2.94772 2.5 3.5L2.5 9.5M7.5 4.5L10.5 4.5M1.5 5.5L4.5 5.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
-                </svg>
+								<path d="M2 3.5L2 8.5M2 8L2 5.5C2 4.39543 2.89543 3.5 4 3.5C5.10457 3.5 6 4.39543 6 5.5M6 5.5L6 8.5M6 5.5L6 8M6 5.5C6 4.39543 6.89543 3.5 8 3.5C9.10457 3.5 10 4.39543 10 5.5V8.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+							</svg>
                 			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                	<path d="M2 3.5L2 8.5M2 8L2 5.5C2 4.39543 2.89543 3.5 4 3.5C5.10457 3.5 6 4.39543 6 5.5M6 5.5L6 8.5M6 5.5L6 8M6 5.5C6 4.39543 6.89543 3.5 8 3.5C9.10457 3.5 10 4.39543 10 5.5V8.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+                	<path d="M10.5 9.5H10C9.44772 9.5 9 9.05228 9 8.5V2.5M4.5 2.5H3.5C2.94772 2.5 2.5 2.94772 2.5 3.5L2.5 9.5M7.5 4.5L10.5 4.5M1.5 5.5L4.5 5.5" stroke="white" stroke-width="2" stroke-linecap="round"></path>
                 </svg>
                 		</button>
                 
@@ -210,7 +210,7 @@
                 			$$(".imperial-system-item, .metric-system-item").forEach(function(element, index){
                 				element.classList.remove("system-item-hidden");
                 			});
-                			$$((defaultSystem == "metric") ? ".imperial-system-item" : ".metric-system-item").forEach(function(element, index){
+                			$$((defaultSystem == "imperial") ? ".imperial-system-item" : ".metric-system-item").forEach(function(element, index){
                 				element.classList.add("system-item-hidden");
                 			});
                 			if(defaultSystem == "metric") $('.system-switcher').classList.add('system-switcher--active');
@@ -268,43 +268,43 @@
 			<tbody class="result-table__body">
 				<tr class="result-table__row">
 					<td class="result-table__cell"><p class="tag tag--red">Perte de poids extrême</p></td>
-					<td class="result-table__cell" id="change-0">-2 lb/week</td>
+					<td class="result-table__cell" id="change-0">-1 kg/semaine</td>
 					<td class="result-table__cell animate" id="cal-0">1,626 cal/day</td>
 					<td class="result-table__cell animate" id="percent-0">62%</td>
 				</tr>
 				<tr class="result-table__row">
 					<td class="result-table__cell"><p class="tag tag--yellow">Perte de poids</p></td>
-					<td class="result-table__cell" id="change-1">-1 lb/week</td>
+					<td class="result-table__cell" id="change-1">-0.5 kg/semaine</td>
 					<td class="result-table__cell animate" id="cal-1">2,126 cal/day</td>
 					<td class="result-table__cell animate" id="percent-1">81%</td>
 				</tr>
 				<tr class="result-table__row">
 					<td class="result-table__cell"><p class="tag tag--green">Perte de poids légère</p></td>
-					<td class="result-table__cell" id="change-2">-0.5 lb/week</td>
+					<td class="result-table__cell" id="change-2">-0.25 kg/semaine</td>
 					<td class="result-table__cell animate" id="cal-2">2,376 cal/day</td>
 					<td class="result-table__cell animate" id="percent-2">90%</td>
 				</tr>
 				<tr class="result-table__row">
 					<td class="result-table__cell"><p class="tag">Maintien du poids</p></td>
-					<td class="result-table__cell" id="change-3">0 lb/week</td>
+					<td class="result-table__cell" id="change-3">0 kg/semaine</td>
 					<td class="result-table__cell animate" id="cal-3">2,626 cal/day</td>
 					<td class="result-table__cell animate" id="percent-3">100%</td>
 				</tr>
 				<tr class="result-table__row">
 					<td class="result-table__cell"><p class="tag tag--green">Légère prise de poids</p></td>
-					<td class="result-table__cell" id="change-4">+0.5 lb/week</td>
+					<td class="result-table__cell" id="change-4">+0.25 kg/semaine</td>
 					<td class="result-table__cell animate" id="cal-4">2,876 cal/day</td>
 					<td class="result-table__cell animate" id="percent-4">110%</td>
 				</tr>
 				<tr class="result-table__row">
 					<td class="result-table__cell"><p class="tag tag--yellow">Prise de poids</p></td>
-					<td class="result-table__cell" id="change-5">+1 lb/week</td>
+					<td class="result-table__cell" id="change-5">+0.5 kg/semaine</td>
 					<td class="result-table__cell animate" id="cal-5">3,126 cal/day</td>
 					<td class="result-table__cell animate" id="percent-5">119%</td>
 				</tr>
 				<tr class="result-table__row">
 					<td class="result-table__cell"><p class="tag tag--red">Prise de poids extrême</p></td>
-					<td class="result-table__cell" id="change-6">+2 lb/week</td>
+					<td class="result-table__cell" id="change-6">+1 kg/semaine</td>
 					<td class="result-table__cell animate" id="cal-6">3,626 cal/day</td>
 					<td class="result-table__cell animate" id="percent-6">138%</td>
 				</tr>
